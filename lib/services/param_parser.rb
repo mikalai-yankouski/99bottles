@@ -8,6 +8,6 @@ class ParamParser
   end
 
   def call
-    p params
+    params
   end
 end
