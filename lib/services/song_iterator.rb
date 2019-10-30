@@ -11,7 +11,7 @@ class SongIterator
 
   def call
     params.each do |number|
-      StringGenerator.new(number).call
+      return StringGenerator.new(number).call
     end
   end
 end
