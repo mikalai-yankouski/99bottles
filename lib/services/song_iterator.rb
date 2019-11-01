@@ -10,10 +10,10 @@ class SongIterator
   end
 
   def call
-    song = []
-    params.each do |number|
-      song.push(StringGenerator.new(number).call)
+    song_strings = params.each_with_object([]) do |number, memo|
+      memo.push(StringGenerator.new(number).call)
     end
-    song.join("\n")
+
+    song_strings.join("\n")
   end
 end
