@@ -14,6 +14,7 @@ class StringGenerator
   def call
     return number_zero_string if number.zero?
     return remainder_zero_string if remainder.zero?
+
     default_string
   end
 
@@ -37,10 +38,4 @@ class StringGenerator
   def bottles_one?(number)
     number == 1 ? BOTTLE : BOTTLES
   end
-
-  # def string
-  #   "#{string_params[:title]} #{string_params[:bottle]} of beer on the wall, " \
-  #   "#{string_params[:text]} #{string_params[:bottle]} of beer.\n" \
-  #   "#{string_params[:pronoun]} #{string_params[:middleware]}, #{string_params[:ending]} of beer on the wall.\n"
-  # end
 end
